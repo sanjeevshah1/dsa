@@ -13,7 +13,6 @@ console.log(isSorted([1,2,5,4]))
 
 //Using Recursion
 const isSortedRecursive = (arr : number[]) : Boolean => {
-    console.log(arr)
     if(arr.length <= 1) return true;
     if(arr[0] > arr[1]) return false;
     // return isSortedRecursive(arr.splice(1));

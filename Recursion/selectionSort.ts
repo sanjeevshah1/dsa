@@ -12,6 +12,16 @@ const recursiveSelectionSort = (arr : number[], start = 0) : number[] => {
 
     return recursiveSelectionSort(arr, start + 1)
 }
+
+// Time Complexity: O(n^2)
+// - Each recursive call does O(n) comparisons in the worst case.
+// - There are O(n) recursive calls.
+// => Total = O(n^2)
+
+// Space Complexity: O(n)
+// - Recursive calls are added to the call stack.
+// - In the worst case, there are n recursive calls on the call stack.
+
 var swap = (arr: number[], i : number, j : number) : void => {
     [arr[i], arr[j]] = [arr[j], arr[i]]
 }

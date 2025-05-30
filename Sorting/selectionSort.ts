@@ -10,6 +10,9 @@ const selectionSort = (arr : number[]) : number[] => {
     return arr;
 }
 
+//Time Complexity : O(n^2)
+//Space complexity: O(1)
+
 var swap = (arr: number[], i : number, j : number) : void => {
     [arr[i], arr[j]] = [arr[j], arr[i]]
 }
