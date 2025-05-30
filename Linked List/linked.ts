@@ -24,8 +24,7 @@ const convertToLL = (arr: number[]) : ListNode => {
     return head;
 }
 
-const traverseLL = (ListNode : ListNode) : void => {
-    let head = ListNode;
+const traverseLL = (head : ListNode) : void => {
     let temp : ListNode | null = head;
     while(temp){
         console.log(temp.data);
@@ -34,3 +33,25 @@ const traverseLL = (ListNode : ListNode) : void => {
 }
 
 traverseLL(convertToLL(arr))
+
+const countLengthOfLL = (head : ListNode) : number => {
+    let count = 0;
+    let temp: ListNode | null = head;
+    while(temp){
+        count++;
+        temp = temp.next
+    }
+    return count;
+}
+const lengthOfLL = countLengthOfLL(convertToLL(arr));
+console.log(lengthOfLL)
+
+const searchItem = (head: ListNode, item: number) : Boolean => {
+    let temp: ListNode | null = head;
+    while(temp){
+        if(temp.data === item) return true;
+        temp = temp.next;
+    }
+    return false;
+}
+console.log(searchItem(convertToLL(arr),9))
