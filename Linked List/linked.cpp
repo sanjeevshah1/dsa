@@ -50,12 +50,21 @@ bool searchItem(Node* head, int item){
     }
     return false;
 }
+ Node* deleteFirstItem(Node* head){
+     if(!head) return nullptr;
+    Node* temp = head;
+    head = temp->next;
+    delete temp;
+    return head;
+ }
+
 int main() {
     cout << "Learning linked list"<<endl;
-    vector<int> arr = {1,2,3,4,5};
+    vector<int> arr = {1,9,2,3,4,5};
     traverseLL(convertArrToLL(arr));
     int length = countLength(convertArrToLL(arr));
     cout<<"The length of LL is "<<length<<endl;
     cout<<"The item "<<3<<"present is in LL "<<searchItem(convertArrToLL(arr),9)<<endl;
+    cout<<"First item after deletion is "<<deleteFirstItem(convertArrToLL(arr))->data<<endl;
     return 0;
 }

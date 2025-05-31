@@ -12,7 +12,8 @@ let node2 = new ListNode(3,node1);
 // console.log(node1)
 // console.log(node2)
 
-const arr = [1,2,3,4,5,0];
+const arr = [1,0];
+// const arr = [1,9,3,4,5,0];
 const convertToLL = (arr: number[]) : ListNode => {
     let head = new ListNode(arr[0]);
     let mover = head;
@@ -55,3 +56,10 @@ const searchItem = (head: ListNode, item: number) : Boolean => {
     return false;
 }
 console.log(searchItem(convertToLL(arr),9))
+
+const deleteFirstItem = (head: ListNode) : ListNode | null => {
+    if(!head) return null;
+    return head.next;
+}
+
+console.log(deleteFirstItem(convertToLL(arr)))
